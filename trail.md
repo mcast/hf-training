@@ -199,3 +199,24 @@ It looked like this,
 
 Doing this feature branch leaves it like this,
 ![feature merged](feature-1-merged.png).
+
+## Update that
+```
+[...]
+Summary of actions:
+- The latest changes from 'origin' were merged into 'master' and 'develop'
+- The feature branch 'feature/did-hotfix' was merged into 'develop'
+- Feature branch 'feature/did-hotfix' has been removed
+- Feature branch 'origin/feature/did-hotfix' has been removed
+- You are now on branch 'develop'
+mca@cgpbar:~/gitwk-cgp/hf-training$ mv ~/feature-1-merged.png .
+mca@cgpbar:~/gitwk-cgp/hf-training$ git add feature-1-merged.png 
+mca@cgpbar:~/gitwk-cgp/hf-training$ git add trail.md 
+mca@cgpbar:~/gitwk-cgp/hf-training$ git ci -m 'tell about feature branch
+bash2> 
+bash2> without using another feature branch - direct on develop'
+[develop a281bc0] tell about feature branch
+ 2 files changed, 69 insertions(+)
+ create mode 100644 feature-1-merged.png
+mca@cgpbar:~/gitwk-cgp/hf-training$ 
+```

@@ -74,3 +74,59 @@ Summary of actions:
 
 mca@cgpbar:~/gitwk-cgp/hf-training$ 
 ```
+
+## Info about the hotfix
+On another feature, before the first is merged.
+
+We're headed for a conflict.
+
+```
+130@cgpbar:~/gitwk-cgp/hf-training$ git hf feature start did-hotfix
+fatal: Index contains uncommited changes. Aborting.
+1@cgpbar:~/gitwk-cgp/hf-training$ git stash
+Saved working directory and index state WIP on develop: ec56c9f Merge tag '0.1.1' into develop
+HEAD is now at ec56c9f Merge tag '0.1.1' into develop
+mca@cgpbar:~/gitwk-cgp/hf-training$ git st
+On branch develop
+Your branch is up-to-date with 'origin/develop'.
+nothing to commit, working directory clean
+mca@cgpbar:~/gitwk-cgp/hf-training$ ls
+README.md  README.md~  version.txt
+mca@cgpbar:~/gitwk-cgp/hf-training$ git hf feature start did-hotfix
+Fetching origin
+Switched to a new branch 'feature/did-hotfix'
+Total 0 (delta 0), reused 0 (delta 0)
+To git@github.com:cancerit/hf-training.git
+ * [new branch]      feature/did-hotfix -> feature/did-hotfix
+
+Summary of actions:
+- A new branch 'feature/did-hotfix' was created, based on 'develop'
+- The branch 'feature/did-hotfix' has been pushed up to 'origin/feature/did-hotfix'
+- You are now on branch 'feature/did-hotfix'
+
+Now, start committing on your feature. When done, create a
+pull request on GitHub.  Once that has been merged, use:
+
+     git hf feature finish did-hotfix
+
+mca@cgpbar:~/gitwk-cgp/hf-training$ git stash pop
+On branch feature/did-hotfix
+Your branch is up-to-date with 'origin/feature/did-hotfix'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   hotfixed.png
+        new file:   trail.md
+
+Dropped refs/stash@{0} (d66eb90f19f7b2ecf40ad92b68004465cc4c9f16)
+mca@cgpbar:~/gitwk-cgp/hf-training$ git ci -m 'info about the hotfix'
+[feature/did-hotfix b9e3c24] info about the hotfix
+ 2 files changed, 76 insertions(+)
+ create mode 100644 hotfixed.png
+ create mode 100644 trail.md
+mca@cgpbar:~/gitwk-cgp/hf-training$ git hf feature finish did-hotfix
+```
+
+It looked like this,
+![hotfixed.png](hotfixed.png)
+

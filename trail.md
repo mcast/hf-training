@@ -109,3 +109,30 @@ Summary of actions:
 
 mca@cgpbar:~/gitwk-cgp/hf-training$ 
 ```
+
+## First feature, shows this file
+Something that isn't going to appear in my upcoming hotfix.
+```
+mca@cgpbar:~/gitwk-cgp/hf-training$ git hf feature start trail-stuff
+Fetching origin
+Switched to a new branch 'feature/trail-stuff'
+Total 0 (delta 0), reused 0 (delta 0)
+To git@github.com:cancerit/hf-training.git
+ * [new branch]      feature/trail-stuff -> feature/trail-stuff
+
+Summary of actions:
+- A new branch 'feature/trail-stuff' was created, based on 'develop'
+- The branch 'feature/trail-stuff' has been pushed up to 'origin/feature/trail-stuff'
+- You are now on branch 'feature/trail-stuff'
+
+Now, start committing on your feature. When done, create a
+pull request on GitHub.  Once that has been merged, use:
+
+     git hf feature finish trail-stuff
+
+mca@cgpbar:~/gitwk-cgp/hf-training$ git add trail.md
+mca@cgpbar:~/gitwk-cgp/hf-training$ git ci -m 'how I got the first release'
+[feature/trail-stuff 5bfd8df] how I got the first release
+ 1 file changed, 111 insertions(+)
+ create mode 100644 trail.md
+```

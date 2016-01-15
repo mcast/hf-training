@@ -124,9 +124,78 @@ mca@cgpbar:~/gitwk-cgp/hf-training$ git ci -m 'info about the hotfix'
  2 files changed, 76 insertions(+)
  create mode 100644 hotfixed.png
  create mode 100644 trail.md
+mca@cgpbar:~/gitwk-cgp/hf-training$ git add trail.md 
+mca@cgpbar:~/gitwk-cgp/hf-training$ git ci -m 'link screenshot of hotfix'
+[feature/did-hotfix 194f343] link screenshot of hotfix
+ 1 file changed, 56 insertions(+)
 mca@cgpbar:~/gitwk-cgp/hf-training$ git hf feature finish did-hotfix
+Fetching origin
+Branches 'feature/did-hotfix' and 'origin/feature/did-hotfix' have diverged.
+And local branch 'feature/did-hotfix' is ahead of 'origin/feature/did-hotfix'.
+
+Feature branch has not yet been merged into origin/develop.
+Please raise a pull-request via GitHub first, or use the -f flag.
+1@cgpbar:~/gitwk-cgp/hf-training$ git push
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Counting objects: 7, done.
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 54.32 KiB | 0 bytes/s, done.
+Total 7 (delta 2), reused 0 (delta 0)
+To git@github.com:cancerit/hf-training.git
+   ec56c9f..194f343  feature/did-hotfix -> feature/did-hotfix
+mca@cgpbar:~/gitwk-cgp/hf-training$ # did a pull request and merge in Github
+mca@cgpbar:~/gitwk-cgp/hf-training$ git hf feature finish did-hotfix
+Fetching origin
+remote: Counting objects: 1, done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), done.
+From github.com:cancerit/hf-training
+   ec56c9f..2f56bc5  develop    -> origin/develop
+Switched to branch 'develop'
+Your branch is behind 'origin/develop' by 3 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+Updating ec56c9f..2f56bc5
+Fast-forward
+ hotfixed.png | Bin 0 -> 55069 bytes
+ trail.md     | 132 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 132 insertions(+)
+ create mode 100644 hotfixed.png
+ create mode 100644 trail.md
+Already up-to-date.
+To git@github.com:cancerit/hf-training.git
+ - [deleted]         feature/did-hotfix
+Deleted branch feature/did-hotfix (was 194f343).
+
+Summary of actions:
+- The latest changes from 'origin' were merged into 'master' and 'develop'
+- The feature branch 'feature/did-hotfix' was merged into 'develop'
+- Feature branch 'feature/did-hotfix' has been removed
+- Feature branch 'origin/feature/did-hotfix' has been removed
+- You are now on branch 'develop'
 ```
 
 It looked like this,
 ![hotfixed.png](hotfixed.png)
 
+Doing this feature branch leaves it like this,
+![feature merged](feature-1-merged.png).

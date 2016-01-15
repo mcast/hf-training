@@ -112,7 +112,9 @@ mca@cgpbar:~/gitwk-cgp/hf-training$
 
 ## First feature, shows this file
 Something that isn't going to appear in my upcoming hotfix,
-and looks like [this](feature.png) in gitk.  Note master 
+and looks like [this](feature.png) in gitk.
+
+Note master points at the last release.
 ```
 mca@cgpbar:~/gitwk-cgp/hf-training$ git hf feature start trail-stuff
 Fetching origin
@@ -150,4 +152,40 @@ mca@cgpbar:~/gitwk-cgp/hf-training$ git branch -avv --color=auto
 
 ...take a screenshot of gitk...
 
+mca@cgpbar:~/gitwk-cgp/hf-training$ git add feature.png 
+mca@cgpbar:~/gitwk-cgp/hf-training$ git add trail.md 
+mca@cgpbar:~/gitwk-cgp/hf-training$ git ci -m 'screenshot'
+[feature/trail-stuff 22fa1da] screenshot
+ 2 files changed, 16 insertions(+), 1 deletion(-)
+ create mode 100644 feature.png
+mca@cgpbar:~/gitwk-cgp/hf-training$ git push
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Counting objects: 10, done.
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (10/10), 42.71 KiB | 0 bytes/s, done.
+Total 10 (delta 3), reused 0 (delta 0)
+To git@github.com:cancerit/hf-training.git
+   6b2ff0e..22fa1da  feature/trail-stuff -> feature/trail-stuff
 ```
+
+![screenshot of tree](feature.png)

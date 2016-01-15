@@ -111,7 +111,8 @@ mca@cgpbar:~/gitwk-cgp/hf-training$
 ```
 
 ## First feature, shows this file
-Something that isn't going to appear in my upcoming hotfix.
+Something that isn't going to appear in my upcoming hotfix,
+and looks like [this](feature.png) in gitk.  Note master 
 ```
 mca@cgpbar:~/gitwk-cgp/hf-training$ git hf feature start trail-stuff
 Fetching origin
@@ -135,4 +136,18 @@ mca@cgpbar:~/gitwk-cgp/hf-training$ git ci -m 'how I got the first release'
 [feature/trail-stuff 5bfd8df] how I got the first release
  1 file changed, 111 insertions(+)
  create mode 100644 trail.md
+mca@cgpbar:~/gitwk-cgp/hf-training$ git add trail.md 
+mca@cgpbar:~/gitwk-cgp/hf-training$ git ci -m 'adding the file'
+[feature/trail-stuff b36e1a2] adding the file
+ 1 file changed, 27 insertions(+)
+mca@cgpbar:~/gitwk-cgp/hf-training$ git branch -avv --color=auto
+  develop                            6b2ff0e [origin/develop] Merge tag '0.1.0' into develop
+* feature/trail-stuff                b36e1a2 [origin/feature/trail-stuff: ahead 2] adding the file
+  master                             91169d2 [origin/master] Merge branch 'release/0.1.0'
+  remotes/origin/develop             6b2ff0e Merge tag '0.1.0' into develop
+  remotes/origin/feature/trail-stuff 6b2ff0e Merge tag '0.1.0' into develop
+  remotes/origin/master              91169d2 Merge branch 'release/0.1.0'
+
+...take a screenshot of gitk...
+
 ```

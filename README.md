@@ -15,7 +15,7 @@ cd hf-training
 git hf init
 ```
 
-(You don't need that `-a` on `init`.)
+(You don't need to add the `-a` on `init`.)
 
 # More info
 
